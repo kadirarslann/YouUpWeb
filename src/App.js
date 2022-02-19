@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import LeftMenu  from './components/LeftMenu'
+import MainMenu from './components/MainMenu';
+import { ContextProvider } from './context/Context';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import ProfilePage from './components/profilePage';
+import Readings from './components/readings';
+import Statistics from './components/statistics';
+import Listenings from './components/listenings';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ContextProvider>
+      <Router>
+      <div className="App">
+        <LeftMenu></LeftMenu>
+
+        <>
+        
+        </>
+        <div className="main">
+        
+            <Routes>
+              <Route path="/"  element={<MainMenu></MainMenu>}  />
+              <Route path="/profile"  element={<ProfilePage></ProfilePage>}  />
+              <Route path="/readings"  element={<Readings></Readings>}  />
+              <Route path="/statistics"  element={<Statistics></Statistics>}  />
+              <Route path="/listenings"  element={<Listenings></Listenings>}  />
+            </Routes>
+          
+        
+        </div>
+       
+      </div>
+      </Router>
+      
+   
+     
+    </ContextProvider>
+  
   );
 }
 
