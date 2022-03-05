@@ -4,6 +4,7 @@ body{
   padding: 0px;
   margin: 0px;
   overflow: auto ;
+  background-color: darkcyan;
 }
 * {
   box-sizing: border-box;
@@ -16,24 +17,25 @@ body{
   padding: 0px;
   margin: 0px;
   overflow: auto ;
+  
 }
 .App{
-  background-color: aqua;
+  
   display: flex;
   height:max-content;
   overflow: auto ;
   min-height: 100vh;
 }
 .left-menu{
-  width: 20%;
+  width: 15%;
   padding: 10px;
-  background-color: greenyellow;
+
 
   background-color: red;
   display: block;
 }
 .main{
-  width: 80%;
+  width: 85%;
 }
 .menu-item{
   width: 100%;

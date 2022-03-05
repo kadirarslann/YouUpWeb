@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import ProfilePage from './components/profilePage';
 import Readings from './components/readings';
 import Statistics from './components/statistics';
-import Listenings from './components/listenings';
+import Listenings from './components/Listenings';
 
 function App() {
   return (
