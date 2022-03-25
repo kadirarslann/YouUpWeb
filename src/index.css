@@ -53,6 +53,24 @@ body{
   float: right;
 }
 
+/* profile page --------------------------------------------------*/
+.profile-page{
+  padding: 20px;
+}
+.profile-notlogin-container{
+  display: flex;
+  flex-grow: 1;
+}
+.profile-notlogin{
+  flex-grow: 1;
+}
+.profile-logined-container{
+  display: flex;
+ 
+}
+.profile-logined{
+  flex-grow: 1;
+}
 
 /* reading page --------------------------------------------------*/
 .readings-container{
@@ -62,9 +80,12 @@ body{
 
 .readings-books{
   width: 20%;
+  background-color: antiquewhite;
+  min-height: 100vh;
 }
 .readings-contents{
   white-space: pre-line; 
+  padding: 20px;
   width: 80%;
 }
 .readings-item{
@@ -102,4 +123,10 @@ body{
 
 .listening-item-tracker{
   width: 70%;
+}
+
+
+.flex-float-right{
+  flex-grow: 1;
+  align-self: flex-end;
 }

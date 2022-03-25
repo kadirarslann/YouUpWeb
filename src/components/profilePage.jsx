@@ -14,32 +14,38 @@ function ProfilePage() {
     useContext(Context)
 
   const responseGoogle = (response) => {
-    console.log(response);
+    // console.log(response);
   }
   const login = (response) => {
     setUserAuthenticated(true)
-    console.log("user login oldu")
-    console.log(response);
+    // console.log("user login oldu")
+    // console.log(response);
     setUser(response["profileObj"])
   }
   const logout = (response) => {
     setUserAuthenticated(false)
-    console.log("user logout oldu")
-    console.log(response);
+    // console.log("user logout oldu")
+    // console.log(response);
     setUser({})
   }
+  console.log(user)
   return (
     <div className="profile-page">
       {!userAuthenticated?
-        <div>
-            <UserLogin>
+        <div className="profile-notlogin-container" >
+            <div className="profile-notlogin">
+                please login to access your YouUp Profile
+            </div>
+            <UserLogin lassName="flex-float-right">
 
             </UserLogin>
         </div>
-      :
-        <div>
-          
-          <UserLogout>
+      :     
+        <div className="profile-logined-container">
+           <div className="profile-logined">
+                Welcome {user.name}
+            </div>
+          <UserLogout className="flex-float-right">
 
           </UserLogout>
            {/* <GoogleLogout
@@ -51,7 +57,7 @@ function ProfilePage() {
         </div>
       }
             
-        <div>profilePagP</div>
+        
     </div>
     
   )
