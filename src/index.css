@@ -29,6 +29,7 @@ body{
 }
 .left-menu{
   width: 15%;
+  min-width: 200px;
   padding: 10px;
 
 
@@ -60,12 +61,21 @@ body{
 .profile-notlogin-container{
   display: flex;
   flex-grow: 1;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
 }
 .profile-notlogin{
   flex-grow: 1;
 }
 .profile-logined-container{
+  font-size: 20px;
   display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
  
 }
 .profile-logined{
@@ -124,9 +134,93 @@ body{
 .listening-item-tracker{
   width: 70%;
 }
-
+.registration-form{
+  padding: 10px;
+}
 
 .flex-float-right{
   flex-grow: 1;
   align-self: flex-end;
+}
+.text-right{
+  text-align: right;
+}
+
+.text-center{
+  text-align: center;
+}
+.standart-text-format{
+  padding: 5px;
+  font-size: 14px;
+}
+.flex{
+  display: flex;
+}
+
+.p5{
+  padding: 5px;
+}
+.p10{
+  padding: 10px;
+}
+.p15{
+  padding: 15px;
+}
+.m5{
+  margin: 5px;
+}
+.m10{
+  margin: 10px;
+}
+.m15{
+  margin: 15px;
+}
+.f10{
+  font-size: 10px;
+}
+.f15{
+  font-size: 15px;
+}
+.f20{
+  font-size: 20px;
+}
+.f25{
+  font-size: 25px;
+}
+.red{
+  color:red;
+
+}
+.red *{
+  color:red;
+}
+.white{
+  color:white;
+}
+.white *{
+  color:white;
+}
+.black{
+  color:black;
+}
+.black *{
+  color:black;
+}
+.bottom{
+  position: absolute;
+  bottom: 0;
+}
+
+.data-item{
+  display: flex;
+  flex-direction: column;
+}
+
+.w30{
+  width: 30px !important;
+  height: 30px !important;
+}
+
+.b2{
+  border: 1px black dashed;
 }

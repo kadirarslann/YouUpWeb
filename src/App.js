@@ -6,6 +6,8 @@ import ProfilePage from './components/profilePage';
 import Readings from './components/readings';
 import Statistics from './components/statistics';
 import Listenings from './components/Listenings';
+import DataPage from './components/DataPage';
+import Therapist from './components/therapist';
 
 function App() {
   return (
@@ -20,8 +22,10 @@ function App() {
         <div className="main">
         
             <Routes>
-              <Route path="/"  element={<MainMenu></MainMenu>}  />
+              
               <Route path="/profile"  element={<ProfilePage></ProfilePage>}  />
+              <Route path="/therapist"  element={<Therapist></Therapist>}  />
+              <Route path="/data"  element={<DataPage></DataPage>}  />
               <Route path="/readings"  element={<Readings></Readings>}  />
               <Route path="/statistics"  element={<Statistics></Statistics>}  />
               <Route path="/listenings"  element={<Listenings></Listenings>}  />
