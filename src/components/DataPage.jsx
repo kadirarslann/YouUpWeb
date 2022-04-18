@@ -10,12 +10,13 @@ function DataPage() {
     setUser,
     userRegistered,
     setuserRegistered,
+    backendurl
   } = useContext(Context);
   const [data, setData] = useState([]);
 
   function getuserdata() {
     axios
-      .get("http://localhost:5000/getevents/" + user["googleId"])
+      .get(backendurl+"getevents/" + user["googleId"])
       .then((response) => {
         setData(response["data"]["0"]);
       })

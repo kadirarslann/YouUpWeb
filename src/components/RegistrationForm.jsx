@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import axios from "axios";
 import Context from "../context/Context";
 function RegistrationForm() {
-  const { userAuthenticated, setUserAuthenticated, user, setUser } =
+  const { userAuthenticated, setUserAuthenticated, user, setUser ,backendurl} =
     useContext(Context);
 
   let type = "-1";
@@ -22,7 +22,7 @@ function RegistrationForm() {
     console.log(user);
     e.preventDefault();
     axios
-      .post("http://localhost:5000/createuser", {
+      .post(backendurl+"createuser", {
         usertype: type,
         name: user.givenName,
         surname: user.familyName,

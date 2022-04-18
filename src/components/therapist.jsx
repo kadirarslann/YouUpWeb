@@ -13,11 +13,12 @@ function Therapist() {
     settherapists,
     therapistdata,
     settherapistdata,
+    backendurl
   } = useContext(Context);
 
   function getAllTherapists() {
     axios
-      .get("http://localhost:5000/gettherapists")
+      .get(backendurl+"gettherapists")
       .then((response) => {
         // if(response['data']['registered']==='true')
         settherapistdata(response["data"]["0"]);
@@ -29,9 +30,9 @@ function Therapist() {
   }
 
   function getTherapist() {
-    console.log("http://localhost:5000/gettherapist/" + user["googleId"]);
+    console.log(backendurl+"gettherapist/" + user["googleId"]);
     axios
-      .get("http://localhost:5000/gettherapist/" + user["googleId"])
+      .get(backendurl+"gettherapist/" + user["googleId"])
       .then((response) => {
         if (response["data"]["registered"] === "true")
           settherapistdata(response["data"]);

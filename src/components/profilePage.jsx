@@ -16,10 +16,11 @@ function ProfilePage() {
     setuserRegistered,
     userrole,
     setuserrole,
+    backendurl
   } = useContext(Context);
   function checkRegistration() {
     axios
-      .get("http://localhost:5000/getuser/" + user["googleId"])
+      .get(backendurl+"getuser/" + user["googleId"])
       .then((response) => {
         console.log(response);
         if (response.data["registered"] === "true") {

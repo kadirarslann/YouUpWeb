@@ -8,6 +8,7 @@ import Statistics from './components/statistics';
 import Listenings from './components/Listenings';
 import DataPage from './components/DataPage';
 import Therapist from './components/therapist';
+import DataofPatients from './components/DataofPatients';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
               <Route path="/readings"  element={<Readings></Readings>}  />
               <Route path="/statistics"  element={<Statistics></Statistics>}  />
               <Route path="/listenings"  element={<Listenings></Listenings>}  />
+              <Route path="/dataofpatients"  element={<DataofPatients></DataofPatients>}  />
             </Routes>
           
         

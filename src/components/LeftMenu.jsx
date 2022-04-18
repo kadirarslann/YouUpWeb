@@ -30,7 +30,7 @@ function LeftMenu() {
       <MenuItem link="readings"></MenuItem>
       <MenuItem link="listenings"></MenuItem>
 
-      {user !== null && userrole === 1 ? <MenuItem link="data"></MenuItem> : ""}
+      {user !== null && userrole === 1 ? <MenuItem link="dataofpatients"></MenuItem> : ""}
       {/* <MenuItem link="live"></MenuItem> */}
     </div>
   );
