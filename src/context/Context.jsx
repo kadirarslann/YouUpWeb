@@ -14,12 +14,12 @@ export const ContextProvider = ({ children }) => {
 
   let buildtype="dev"
   if(buildtype ==="env"){
-    setbackendurl("http://localhost:5000/")
+    setbackendurl(backendurl+"")
   }
   
   function checkRegistration() {
     axios
-      .get(backendurl + user["googleId"])
+      .get(backendurl +"getuser/"+ user["googleId"])
       .then((response) => {
         console.log(response);
         if (response.data["registered"] === "true") {

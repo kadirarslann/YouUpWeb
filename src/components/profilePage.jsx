@@ -48,7 +48,12 @@ function ProfilePage() {
         <div className="profile-notlogin-container">
           <div className="profile-notlogin">
             please login to access your YouUp Profile
+            {user !==null?<div className="red f15">
+              You can access mobile app using code {user["googleId"].substring(0,8)}
+            </div>:""}
+            
           </div>
+          
           <UserLogin lassName="flex-float-right"></UserLogin>
         </div>
       ) : (
